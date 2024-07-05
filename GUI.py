@@ -88,6 +88,7 @@ def upload_image():
         file_path=filedialog.askopenfilename()
         uploaded=Image.open(file_path)
         uploaded.thumbnail(((top.winfo_width()/2.25),(top.winfo_height()/2.25)))
+        #uploaded = uploaded.resize((256, 256))
         im=ImageTk.PhotoImage(uploaded)
         sign_image.configure(image=im)
         sign_image.image=im
